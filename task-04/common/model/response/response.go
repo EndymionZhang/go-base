@@ -33,10 +33,6 @@ func OkWithData(data interface{}, c *gin.Context) {
 	Result(responseCode.Success, data, c)
 }
 
-func OkWithDetailed(data interface{}, c *gin.Context) {
-	Result(responseCode.Success, data, c)
-}
-
 func Fail(responseCode int, c *gin.Context) {
 	Result(responseCode, map[string]interface{}{}, c)
 }

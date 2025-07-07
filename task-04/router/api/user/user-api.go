@@ -12,7 +12,7 @@ import (
 
 func Register(c *gin.Context) {
 	var user model.User
-	_, errorCode := request.BindAndValid(c, &user)
+	errorCode := request.BindAndValid(c, &user)
 	if errorCode != responseCode.Success {
 		logger.Error("参数验证错误, %s", user)
 		response.FailWithDetailed(errorCode, nil, c)
@@ -35,7 +35,7 @@ func Register(c *gin.Context) {
 
 func Login(c *gin.Context) {
 	var user model.User
-	_, err := request.BindAndValid(c, &user)
+	err := request.BindAndValid(c, &user)
 	if err != responseCode.Success {
 		logger.Error("参数验证失败, %s", err)
 		response.FailWithDetailed(err, nil, c)

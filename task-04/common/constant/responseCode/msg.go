@@ -8,6 +8,8 @@ var MsgFlags = map[int]string{
 	ErrorAuthCheckTokenFail: "Token鉴权失败，请重新登陆",
 	ErrorUserNotExist:       "用户不存在",
 	ErrorPasswordWrong:      "密码错误",
+	ErrorDeletePost:         "删除文章失败",
+	ErrorEditPost:           "修改文章失败",
 
 	ErrorUserExist: "用户已存在",
 
